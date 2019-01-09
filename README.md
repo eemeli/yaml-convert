@@ -20,11 +20,12 @@ Convert between YAML and JSON
 Options:
   --version     Show version number                                    [boolean]
   --input, -i   Input file; use - for stdin              [string] [default: "-"]
-  --keep, -k    When outputting YAML, keep original styling
-                                                      [boolean] [default: false]
+  --keep, -k    When outputting YAML, keep original styling            [boolean]
   --output, -o  Output file; use - for stdout            [string] [default: "-"]
-  --pretty, -p  When outputting JSON, make it pretty  [boolean] [default: false]
-  --yaml, -y    Format output as YAML                           [default: false]
+  --pretty, -p  When outputting JSON, make it pretty                   [boolean]
+  --quiet, -q   Silence warnings and errors; always try to produce output
+                                                                       [boolean]
+  --yaml, -y    Format output as YAML                                  [boolean]
   --help        Show help                                              [boolean]
 ```
 

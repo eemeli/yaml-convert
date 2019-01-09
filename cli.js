@@ -14,7 +14,6 @@ const yargs = require('yargs')
     },
     keep: {
       alias: 'k',
-      default: false,
       describe: 'When outputting YAML, keep original styling',
       type: 'boolean'
     },
@@ -26,19 +25,23 @@ const yargs = require('yargs')
     },
     pretty: {
       alias: 'p',
-      default: false,
       describe: 'When outputting JSON, make it pretty',
+      type: 'boolean'
+    },
+    quiet: {
+      alias: 'q',
+      describe: 'Silence warnings and errors; always try to produce output',
       type: 'boolean'
     },
     yaml: {
       alias: 'y',
-      default: false,
-      describe: 'Format output as YAML'
+      describe: 'Format output as YAML',
+      type: 'boolean'
     }
   })
   .help()
 
-const { input, keep, output, pretty, yaml } = yargs.argv
+const { input, keep, output, pretty, quiet, yaml } = yargs.argv
 
 if (input === '-' && process.stdin.isTTY) {
   yargs.showHelp()
@@ -48,6 +51,15 @@ if (input === '-' && process.stdin.isTTY) {
 const inputStr = fs.readFileSync(input === '-' ? 0 : input, 'utf8')
 const options = { keepNodeTypes: keep }
 const doc = YAML.parseDocument(inputStr, options)
+if (quiet) {
+  doc.errors = []
+} else {
+  for (const warn of doc.warnings) console.warn(`${warn.name}: ${warn.message}`)
+  if (doc.errors.length > 0) {
+    for (const err of doc.errors) console.error(`${err.name}: ${err.message}`)
+    process.exit(2)
+  }
+}
 
 const outputStr = yaml
   ? String(doc)
