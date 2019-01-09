@@ -12,8 +12,16 @@
   "license": "ISC",
   "repository": "github:eemeli/yaml-convert",
   "homepage": "https://github.com/eemeli/yaml-convert#readme",
+  "bin": {
+    "yc": "./cli.js",
+    "yaml-convert": "./cli.js"
+  },
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "dependencies": {
+    "yaml": "^1.2.0",
+    "yargs": "^12.0.5"
   }
 }
