@@ -1,0 +1,19 @@
+{
+  "name": "yaml-convert",
+  "version": "0.0.1",
+  "description": "Command-line utility for reading & writing YAML files",
+  "keywords": [
+    "YAML",
+    "CLI",
+    "JSON",
+    "convert"
+  ],
+  "author": "Eemeli Aro <eemeli@gmail.com>",
+  "license": "ISC",
+  "repository": "github:eemeli/yaml-convert",
+  "homepage": "https://github.com/eemeli/yaml-convert#readme",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
