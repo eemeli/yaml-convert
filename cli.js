@@ -4,7 +4,7 @@ const fs = require('fs')
 const YAML = require('yaml')
 
 const yargs = require('yargs')
-  .usage('$0 [options]', 'Convert between YAML and JSON')
+  .command('$0 [input]', 'Convert between YAML and JSON')
   .options({
     input: {
       alias: 'i',

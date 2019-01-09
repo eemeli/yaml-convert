@@ -13,7 +13,7 @@ npm install yaml-convert
 ### Usage
 
 ```
-yaml-convert [options]
+yaml-convert [input]
 
 Convert between YAML and JSON
 
@@ -34,5 +34,5 @@ Options:
 ```
 yaml-convert --input file.yaml --output file.json
 yaml-convert -p < file.yaml > pretty.json
-yaml-convert -i file.yaml | jq .foo
+yaml-convert file.yaml | jq .foo
 ```
