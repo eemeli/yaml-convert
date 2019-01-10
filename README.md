@@ -15,17 +15,22 @@ npm install yaml-convert
 ```
 yaml-convert [input]
 
-Convert between YAML and JSON
+Convert between YAML and JSON, optionally wrapping output as a JS module
+
+Output format:
+  --es6, -e   Convert to an ECMAScript module                          [boolean]
+  --json, -j  Convert to JSON                          [boolean] [default: true]
+  --node, -n  Convert to a Node.js module                              [boolean]
+  --yaml, -y  Convert to YAML                                          [boolean]
 
 Options:
   --version     Show version number                                    [boolean]
   --input, -i   Input file; use - for stdin              [string] [default: "-"]
   --keep, -k    When outputting YAML, keep original styling            [boolean]
   --output, -o  Output file; use - for stdout            [string] [default: "-"]
-  --pretty, -p  When outputting JSON, make it pretty                   [boolean]
+  --pretty, -p  When outputting JS or JSON, make it pretty             [boolean]
   --quiet, -q   Silence warnings and errors; always try to produce output
                                                                        [boolean]
-  --yaml, -y    Format output as YAML                                  [boolean]
   --help        Show help                                              [boolean]
 ```
 
@@ -33,6 +38,6 @@ Options:
 
 ```
 yaml-convert --input file.yaml --output file.json
-yaml-convert -p < file.yaml > pretty.json
+yaml-convert -np < file.yaml > file.js
 yaml-convert file.yaml | jq .foo
 ```
