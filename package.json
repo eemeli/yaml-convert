@@ -21,9 +21,7 @@
     "singleQuote": true
   },
   "dependencies": {
-    "yaml": "^1.10.0"
-  },
-  "devDependencies": {
-    "yargs": "^15.4.1"
+    "yaml": "^1.10.2",
+    "yargs": "^17.3.1"
   }
 }
