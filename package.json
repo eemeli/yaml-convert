@@ -1,6 +1,6 @@
 {
   "name": "yaml-convert",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Command-line utility for reading & writing YAML files",
   "keywords": [
     "YAML",
