@@ -18,7 +18,8 @@
   },
   "prettier": {
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "trailingComma": "none"
   },
   "dependencies": {
     "yaml": "^1.10.2",
