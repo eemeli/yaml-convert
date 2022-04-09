@@ -13,8 +13,8 @@
   "repository": "github:eemeli/yaml-convert",
   "homepage": "https://github.com/eemeli/yaml-convert#readme",
   "bin": {
-    "yc": "./cli.js",
-    "yaml-convert": "./cli.js"
+    "yc": "./lib/cli.js",
+    "yaml-convert": "./lib/cli.js"
   },
   "prettier": {
     "semi": false,
