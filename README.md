@@ -1,5 +1,11 @@
 # yaml-convert
 
+<br/><br/>
+
+## Deprecated: Command-line tool now included in [`yaml`](https://github.com/eemeli/yaml).
+
+<br/><br/><br/>
+
 Command-line utility for converting between YAML and JSON, using
 [`yaml`](https://eemeli.org/yaml/). By default parses either YAML or JSON from
 standard input and outputs JSON on standard output.
